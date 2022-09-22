@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Counter</h1>
+    <div class="counter">
+      <button onclick="decrease()" id="subtract">-</button>
+      <h1 id="number"></h1>
+      <button onclick="increase()" id="addition">+</button>
+    </div>
+    <p id="error">Error</p>
+  </div>
+</body>
+
+<script>
+  let count = 0;
+
+  let number = document.querySelector('#number');
+  number.innerText = count;
+
+  let sub = document.querySelector('#subtract');
+  let add = document.querySelector('#addition')
+  function increase() {
+    console.log("Increase button clicked");
+    count++
+    number.innerText = count;
+
+
+  }
+    function decrease(){
+      console.log("Decrease button clicked");
+      count--
+      number.innerText = count;
+    }
+
+
+</script>
+
+</html>
